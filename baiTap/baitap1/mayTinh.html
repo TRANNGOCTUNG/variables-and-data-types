@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <h2>Caculator</h2>
+  <tr>
+    <td>
+      <input type="number" id="demo">
+      <input type="number" id="demo1">
+      <br><br>
+    <button type="button" onclick="addition()">Addition(+)</button>
+    <button type="button" onclick="subtraction()">Subtraction(-)</button>
+    <button type="button" onclick="multiplication()">Multiplication(X)</button>
+    <button type="button" onclick="division()">Division(/)</button>
+      <br>
+      <p id="demo2"></p>
+    </td>
+  </tr>
+</table>
+</body>
+<script>
+  function addition() {
+    let number1 = +document.getElementById("demo").value;
+    let number2 = +document.getElementById("demo1").value;
+    let result;
+   result = "result = " + (number1 + number2) ;
+   document.getElementById("demo2").innerHTML = result;
+  }
+  function subtraction() {
+    let number1 = +document.getElementById("demo").value;
+    let number2 = +document.getElementById("demo1").value;
+    let result;
+    result = "result = " + (number1 - number2) ;
+    document.getElementById("demo2").innerHTML = result;
+  }
+  function multiplication() {
+    let number1 = +document.getElementById("demo").value;
+    let number2 = +document.getElementById("demo1").value;
+    let result;
+    result = "result = " + (number1 * number2) ;
+    document.getElementById("demo2").innerHTML = result;
+  }
+  function division() {
+    let number1 = +document.getElementById("demo").value;
+    let number2 = +document.getElementById("demo1").value;
+    let result;
+    result = "result = " + (number1 / number2) ;
+    document.getElementById("demo2").innerHTML = result;
+  }
+</script>
+</html>

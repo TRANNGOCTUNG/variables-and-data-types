@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th><label for="demo">Amount</label></th>
+    <th>From Currency</th>
+    <th> To Currency</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>
+      <input  type="number" id="demo"/>
+    </td>
+    <td>
+      <select id="demo1">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td>
+      <select id="demo2">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td>
+      <button type="button" onclick="ChangeMoney()">Click Me</button>
+    </td>
+  </tr>
+</table>
+<br>
+<p id="demo3"></p>
+
+</body>
+<script>
+  function ChangeMoney() {
+    let number = +document.getElementById("demo").value;
+    let number1 = document.getElementById("demo1").value;
+    let number2 = document.getElementById("demo2").value;
+    let Result ;
+    if (number1 == "USD" && number2 == "VND") {
+      Result = "kết quả là :" + (number * 23000) + "đồng";
+    } else if (number1 == "VND" && number2 == "USD") {
+      Result = "kết quả là : " + (number / 23000) + "$";
+    } else if (number1 == "VND" && number2 == "VND") {
+      Result = "kết quả là :" + number + "đồng";
+    } else {
+      Result = "kết quả là :" + number + "$";
+    }
+    document.getElementById("demo3").innerHTML = Result;
+  }
+</script>
+</html>
